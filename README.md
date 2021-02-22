@@ -12,6 +12,13 @@ Randomization Procedure
 
 # R-script
 Below is a step by step guide on how to obtain CRD Analysis using R
+
+# Importing Data Set to R, the data set is annexed in the files here as CRD.xlsx(check out and download)
+library(readxl)
+
+CRD <- read_excel("C:/Users/Boss IT Solutions/OneDrive/CRD.xlsx", col_types = c("text", "numeric"))
+
+View(CRD)
 # Fitting of linear model
 model <-lm(CRD$Yield ~ CRD$Treatment)
 
